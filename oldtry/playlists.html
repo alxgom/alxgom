@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Alexis Nicolas Gomel - Playlists</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align:center">Alexis Nicolas Gomel</h1>
+	  <style>
+		img {
+		  display: block;
+		  margin: 0 auto;
+		  width: 250px;
+		  height: auto;
+		}
+	</style>
+      <img src="DSC06318-linkedi_light_squared.png" alt="profile picture">
+    </header>
+  
+   <header>
+      <h1 style="text-align:center">Playlists</h1>
+    </header>
+
+	
+  <section>
+	        <section id="playlists">
+        <h2>Spotify Playlists</h2>
+        <p>These are my playlists. Please enjoy ;)</p>
+		
+	  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.3"></script>
+	<script>
+	  var accessToken;
+
+	  function getAccessToken() {
+		// Make a request to the Spotify Web API authorization endpoint
+		// to get an access token for your application
+		fetch("https://accounts.spotify.com/authorize", {
+		  method: "POST",
+		  headers: {
+			"Content-Type": "application/x-www-form-urlencoded"
+		  },
+		  body: "client_id=a6bb815b933c4d7f8dfc16b138bfe72f&client_secret=78a4f53693f34885b87f4cf208c8c4fc&grant_type=client_credentials"
+		})
+		.then(response => response.json())
+		.then(data => {
+		  accessToken = data.access_token;
+		  getPlaylistPreview();
+		});
+	  }
+
+	  function getPlaylistPreview() {
+		// Make a request to the Spotify Web API endpoint to get the embed code
+		// for the playlist
+		fetch("https://api.spotify.com/v1/playlists/6Ex6Q0NlnQ9B3Q344C0OlD?si=b6290d8dbb8c4b50/embed", {
+		  method: "GET",
+		  headers: {
+			"Authorization": "Bearer " + accessToken
+		  }
+		})
+		.then(response => response.json())
+		.then(data => {
+		  // Embed the playlist preview in your HTML file
+		  var playlistPreview = document.getElementById("playlist-preview");
+		  playlistPreview.innerHTML = data.html;
+		});
+	  }
+
+	  getAccessToken();
+	</script>
+    </section>
+
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6Ex6Q0NlnQ9B3Q344C0OlD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2l9gpXmsLtF29bj6JIhhii?si=ff427279e76b4e8a" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4JLSbszHq3pm7h2v7MVe9U?si=e09600744a194c74" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/78fPWbnVlo0o1IFal8Pul2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/02srcTRlfp7w4oojH33XbZ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6NweKUuX2PaZF3ivoDrNwz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6gp0IOSYv8aI3LHmeYvZJO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0TUB9IKkLDhnLZLXEVPplN?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6cqbMT2aiE6OyxsFRftgqx?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+
+
+
+
+</html>
+
+
+
