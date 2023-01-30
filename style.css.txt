@@ -1,50 +1,136 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
 }
 
 h1 {
-  margin-right: 20px;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-top: 50px;
 }
 
-main {
+.subcontainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 80%;
+  text-align: left;
 }
 
-section {
-  width: 30%;
-  padding: 20px;
-  background-color: lightgray;
-  border-radius: 10px;
+.subcontainer h2 {
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.publications {
+  margin-top: 20px;
 }
 
-a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  background-color: lightblue;
-  color: white;
+.publications a {
+  color: black;
   text-decoration: none;
-  border-radius: 10px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.social-media a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-media i {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #111;
+}
+
+
+.subcontainer {
+    width: 95%;
+  }
+
+.social-media {
+    width: 95%;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #333;
   margin-bottom: 20px;
 }
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.link a {
+  display: inline-block;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.link a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
