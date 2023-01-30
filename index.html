@@ -23,7 +23,7 @@
 	<nav>
 	  <ul>
 		<li><a href="index.html">Home</a></li>
-		<li><a href="publications.html">Publications</a></li>
+		<li><a href="https://scholar.google.com/citations?user=XgG56aYAAAAJ&hl=es&oi=ao" target="_blank">Publications (Google scholar)</a></li>
 		<li><a href="projects.html">Projects</a></li>
 		<li><a href="photography.html">Photography</a></li>
 		<li><a href="playlists.html">Playlists</a></li>
@@ -32,77 +32,11 @@
 	  </ul>
 	</nav>
 
-      <section>
-        <h2>Publications</h2>
-        <a 
-		href="https://scholar.google.com/citations?user=XgG56aYAAAAJ&hl=es&oi=ao" target="_blank">Google Scholar
-		</a>
-		
-		<iframe 
-		src="https://scholar.google.com/citations?view_op=search_authors&mauthors=Alexis+Nicolas+Gomel&hl=en&oi=ao" width="100%" height="500">
-		</iframe>
-
-      </section>
-      <section>
-        <h2>Projects</h2>
-        <p>Learn about my current and past projects.</p>
-		</section>
-      <section>
-	        <section id="playlists">
-        <h2>Spotify Playlists</h2>
-        <p>Listen to my favorite music on<a href="https://open.spotify.com/playlist/6Ex6Q0NlnQ9B3Q344C0OlD?si=b6290d8dbb8c4b50" target="_blank">My own lindy night</a></p>
-		
-	  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.3"></script>
-	<script>
-	  var accessToken;
-
-	  function getAccessToken() {
-		// Make a request to the Spotify Web API authorization endpoint
-		// to get an access token for your application
-		fetch("https://accounts.spotify.com/authorize", {
-		  method: "POST",
-		  headers: {
-			"Content-Type": "application/x-www-form-urlencoded"
-		  },
-		  body: "client_id=a6bb815b933c4d7f8dfc16b138bfe72f&client_secret=78a4f53693f34885b87f4cf208c8c4fc&grant_type=client_credentials"
-		})
-		.then(response => response.json())
-		.then(data => {
-		  accessToken = data.access_token;
-		  getPlaylistPreview();
-		});
-	  }
-
-	  function getPlaylistPreview() {
-		// Make a request to the Spotify Web API endpoint to get the embed code
-		// for the playlist
-		fetch("https://api.spotify.com/v1/playlists/6Ex6Q0NlnQ9B3Q344C0OlD?si=b6290d8dbb8c4b50/embed", {
-		  method: "GET",
-		  headers: {
-			"Authorization": "Bearer " + accessToken
-		  }
-		})
-		.then(response => response.json())
-		.then(data => {
-		  // Embed the playlist preview in your HTML file
-		  var playlistPreview = document.getElementById("playlist-preview");
-		  playlistPreview.innerHTML = data.html;
-		});
-	  }
-
-	  getAccessToken();
-	</script>
-    </section>
-
-	<div id="playlist-preview"></div>
-		  </section>
-		  <section>
-			<h2>Photography</h2>
-			<a href="https://gurushots.com/lookn_around/photos" target="_blank">Photography Page</a>
-		  </section>
+  	  
+		  
 		</main>
 		<section>
-		  <h2>Social Media</h2>
+		  <h2 style="text-align:center"> Social Media</h2>
 		  <a href="https://www.researchgate.net/profile/Alexis-Gomel" target="_blank">Researchgate</a>
 		  <a href="https://www.instagram.com/lookn_around/" target="_blank">Instagram</a>
 		  <a href="https://www.linkedin.com/in/alexis-gomel-95484278/" target="_blank">LinkedIn</a>
