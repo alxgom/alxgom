@@ -1,10 +1,22 @@
+<?php
+
+if($_POST["message"]) {
+
+mail("alexis.gomel@gmail.com", "Email from my website",
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Steller landing page.">
-    <meta name="author" content="Devcrud">
+    <meta name="description" content="">
+    <meta name="author" content="Alexis/Devcrud">
     <title>Alexis Nicolas Gomel - Personal Website </title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -16,7 +28,7 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="assets/imgs/logo.svg" alt=""></a>
+            <a class="navbar-brand" href="index.html"><img src="assets/imgs/icon_website.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,7 +67,7 @@
                 <p>Physicist/Researcher</p>
 
                 <div class="buttons pt-3">
-                    <button class="btn btn-primary rounded"></button>
+                     <a href="mailto:alexis.gomel@gmail.com" target="_blank"> <button class="btn btn-primary rounded"> <i class="ti-email "></i></button>  </a> 
 				<a href="assets/files/CV_Alexis_Gomel.pdf" download>                   
 					<button class="btn btn-dark rounded">DOWNLOAD CV</button>
 					</a>
@@ -69,7 +81,7 @@
                 </div>
             </div>              
             <div class="img-holder">
-             <!--    <img src="assets/imgs/man.svg" alt="">div>-->
+            <img src="assets/imgs/wavesss.png" alt="">
         </div>
             </div>      
         </div>  
@@ -102,7 +114,7 @@
                 <div class="pl-md-4 col-md-9">
                     <h6 class="title">Alexis Gomel</h6>
                     <p class="subtitle">Physicist/Researcher</p>
-                    <p>Welcome to my personal website! I am a physicist with a passion for nonlinear dynamics, complex systems, early warnings, statistical mechanics and its applications to many systems. My research interests also extend to the field of generative AI and data science.</p>
+                    <p>Welcome to my personal website! I am a physicist with a passion for nonlinear dynamics, complex systems, early warnings, statistical mechanics and its applications to many systems. My research interests also extend to education and the fields of generative AI and data science.</p>
                     <p>When I'm not delving into scientific pursuits, I love to capture life through photography, move to the rhythm of lindy hop, beat the drums, and hit the road for spontaneous hitchhiking adventures.</p>
                     <a href="assets/files/CV_Alexis_Gomel.pdf" download>   <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>   </a>                
                 </div>
@@ -205,17 +217,17 @@
                         <img src="assets/imgs/3d_hamiltonian.png" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Rogue wave freezing</h5>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>  
                         </div>
                     </div>
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-2.jpg" alt="">
+                        <img src="assets/imgs/wave_scheme_flows.png" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>ADHONLS</h5>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>                              
@@ -227,7 +239,7 @@
                         <img src="assets/imgs/tippings.png" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Tipping points</h5>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>  
@@ -259,7 +271,7 @@
                         <img src="assets/imgs/filament_scheme2.png" alt="">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Filamentation statistical regimes</h5>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>                              
@@ -407,8 +419,9 @@
     <section id="contact" class="position-relative section">
         <div class="container text-center">
             <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <div class="contact text-left">
+			<h6 class="section-title mb-4"><a href="alexis.gomel@gmail.com">Send me an email: alexis.gomel@gmail.com </a></h6>
+<h6 class="subtitle"></h6>
+           <!-- <div class="contact text-left">
                 <div class="form">
                     <h6 class="subtitle"></h6>
                     <h6 class="section-title mb-4">Get In Touch</h6>
@@ -417,15 +430,12 @@
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
                             <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
                     </form>
                 </div>
-                <div class="contact-infos">
+                <!-- <div class="contact-infos">
                     <div class="item">
                         <i class="ti-location-pin"></i>
                         <div class="">
@@ -448,8 +458,15 @@
                         </div>
                     </div>
                 </div>                  
-            </div>
+            </div>-->  
         </div>  
+		
+		<form method="post" action="subscriberform.php">
+
+<textarea name="message"></textarea>
+
+<input type="submit">
+
 		 <!-- I HAVE TO CHANGE THIS MAP -->
         <div id="map">
             <iframe src="https://snazzymaps.com/embed/458460"></iframe>
@@ -457,6 +474,8 @@
     </section>
     <!-- End of Contact Section -->
 
+
+</form>
     <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
