@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
+	<script src="bibtex_js.js" type="text/javascript" charset="utf-8"></script>
 </head>
+
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page navigation -->
@@ -57,21 +61,13 @@
 	 </div>
   </section>
    
-	<section id="Teaching" class="section mt-3">
-	<div class="container text-center">
-            <h6 class="section-title mb-4">My teaching experience</h6>
-            <p class="mb-5 pb-4">... </p>
-	 </div>
-  </section>
+	
   
-  
-   <section id="Publications" class="section mt-3">
-  </section>
-  
-   <section id="Past_jobs" class="section mt-3">
-  </section>
-  
+
+
     <section id="Formation" class="section mt-3">
+
+	 <!-- 
 	<div class="container text-center">
             <h6 class="section-title mb-4">My formation</h6>
             <p class="mb-5 pb-4"> </p>
@@ -130,7 +126,7 @@
 
         </div>
 				<!-- Content for left section goes here -->
-			  </div>
+			<!--   </div>
 			  <div class="right-section section2">
 			  			   <h6 class="section-title mb-4">Master in Physical sciences</h6>
 						   <h3 class="section-title mb-2">Rogue waves en lasers modulados en fase</h3>
@@ -145,13 +141,12 @@
 								<p> Co-advisor: Pablo Mininni</p>
 				</div>
 				<!-- Content for right section goes here -->
-			  </div>
+			 				<!-- </div>
 			</div>
-
+			-->
 
 	 
-  </section>
-  
+ 
   <!-- 
   
    <section id="about" class="section mt-3">
@@ -192,6 +187,107 @@
         </div>
     </section>
 	-->
+	<div class="container text-center">
+		            <h6 class="section-title mb-4">Academic Formation</h6>
+					<h6 class="mb-2 pb-4"></h6>
+
+		<div class="row mx-auto">
+			<div class="col-sm-6 col-md-6 mb-3">
+				<h2 class="section-title mb-4" style="font-weight: bold; font-size: 40px;" >PHD in Physical sciences</h2>
+				<h3 class="section-title mb-2">Behavior of self-modulated waves in nonlinear systems</h3>
+				<h6 class="mb-5 pb-4">University of Geneva</h6>
+				<div class="img-holder">
+					<style>
+					  .imagefac {
+						width: auto;
+						height: 100px;
+					  }
+					</style>
+					<img src="assets/imgs/fac_sciences_noir.png" alt=""   class="imagefac" />
+					<h6 class="mb-2 pb-4">Advisors</h6>
+					<p> Advisor: Jerôme Kasparian</p>
+					<p> Co-advisor: Maura Brunetti</p>
+				</div>            
+			</div>	
+			<div class="col-sm-6 col-md-6 mb-3">
+				<h2 class="section-title mb-4" style="font-weight: bold; font-size: 40px;">Master in Physical sciences</h2>
+				<h3 class="section-title mb-2">Rogue waves en lasers modulados en fase</h3>
+				<h3 class="section-title mb-2">(Rogue waves in phase modulated lasers)</h3>
+				<h6 class="mb-4 pb-4">University of Buenos Aires</h6>
+				<div class="img-holder">
+					<img src="assets/imgs/600px-UBA.png" alt="" class="imagefac" />
+					<h6 class="mb-2 pb-4">Advisors</h6>
+					<p> Advisor: Jorge Tredicce</p>
+					<p> Co-advisor: Pablo Mininni</p>
+				</div>
+            </div>
+        </div>
+	</div>
+    </section>
+	
+	
+	
+	
+	
+	<section id="Teaching" class="section mt-3">
+	<div class="container text-center">
+		<h1 class="section-title mb-4">Teaching Experience</h1>
+		<h6 class="mb-2 pb-4"></h6>
+		<div class="row mx-auto">
+			<div class="col-sm-6 col-md-6 mb-3">
+				<h2 class="section-title mb-4" style="font-weight: bold; font-size: 40px;" >University level</h2>
+				<h6 class="mb-5 pb-2"></h6>
+
+				<h3 class="mb-3 pb-4">University of Geneva</h3>
+					<p> Teaching assistant</p>
+					<h6 class="mb-2 pb-4">2018-2022</h6>
+					<p> Courses: Physics lab for biologist, Nonlinear Dynamics (in charge of the whole practice)</p>
+					
+					<h6 class="mb-5 pb-2"></h6>
+					<h3 class="mb-3 pb-4">University of Buenos Aires</h3>
+					<p> Teaching assistant</p>
+					<h6 class="mb-2 pb-4">2016-2016</h6>
+					<p> Courses: Introduction to thermodynamics and quantum mechanics.</p>
+					
+					
+			</div>
+		
+			<div class="col-sm-6 col-md-6 mb-3">
+				<h1 class="section-title mb-4" style="font-weight: bold; font-size: 40px;">High school level</h1>	
+				<h6 class="mb-5 pb-2"></h6>
+				<h3 class="mb-3 pb-4">Boston High shcool</h3>
+					<p> Math teacher</p>
+					<h6 class="mb-2 pb-4">...</h6>
+					<p> In charge of math for the 16yrs old students.</p>
+			</div>
+		</div>
+	</div>
+  </section>
 
 
+
+  
+   <section id="Publications" class="section mt-3">
+   
+		   
+		<bibtex src="mybib.bib"></bibtex>
+
+		<textarea id="bibtex_input" style="display:none;">
+		@book{book1,
+		  author = "Donald Knuth",
+		  title = "Concrete Mathematics"
+		}
+		</textarea>
+
+		<div id="bibtex_display"></div>
+  </section>
+  
+   <section id="Past_jobs" class="section mt-3">
+   
+   
+  </section>
+   
+   
+   </body>
+   
 </html>
