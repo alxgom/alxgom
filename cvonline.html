@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
 	<script src="bibtex_js.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
@@ -268,22 +268,24 @@
 
   
    <section id="Publications" class="section mt-3">
-   
-		   
-		<bibtex src="mybib.bib"></bibtex>
+   	<div class="container text-center">
+		<h1 class="section-title mb-4">Publications</h1>
 
+		<bibtex src="mybib.bib"></bibtex>
+ <!--<div id="bibtex_display"></div>
 		<textarea id="bibtex_input" style="display:none;">
 		@book{book1,
 		  author = "Donald Knuth",
 		  title = "Concrete Mathematics"
 		}
-		</textarea>
-
-		<div id="bibtex_display"></div>
+		</textarea>-->
+</div>
+		
   </section>
-  
+
    <section id="Past_jobs" class="section mt-3">
-   
+   					<p>Other jobs</p>
+
    
   </section>
    
