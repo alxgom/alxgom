@@ -11676,3 +11676,34 @@ pre {
 .section.bg-gray {
   background: white;
 }
+
+.general-img-holder {
+  height: 100%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 0px;
+}
+
+.general-img-holder img {
+  width: 100%;
+  max-width: 500px;
+  -webkit-filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
+          filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
+  margin-left: auto;
+  margin-right:auto;
+}
+
+@media (max-width
