@@ -170,12 +170,28 @@
   
    <section id="Publications" class="section mt-3">
    	<div class="container text-center">
+	  
+		<div class="bibtex_template">
+				 <div style="margin-left: 10px; margin-bottom:5px;">
+				<span class="title" style="font-weight: bold;font-size: 18px" ></span>
+			  </div>
+			  <div class="if author" >
+				<span class="if year">
+				  <span class="year"></span>, 
+				</span>
+				<span class="author"></span>
+				<span class="if url" style="margin-left: 20px">
+				  <a class="url" style="color:black; font-size:10px">(view online)</a>
+				</span>
+			  </div>
+		</div>
+	
 		<h1 class="section-title mb-6" style="font-weight: bold; font-size: 40px;">Publications</h1>
 		<bibtex src="mybib.bib"></bibtex>
 		 <!--<div id="bibtex_display"></div>-->
-		<div class="bibtex_display" bibtexkey="Gomel2023"></div>
-		<div class="bibtex_display" bibtexkey="Gomel2021"></div>
-		<div class="bibtex_display mb-6" bibtexkey="Marconi2020a"></div>
+		<div class="bibtex_template" bibtexkey="Gomel2023"></div>
+		<div class="bibtex_template" bibtexkey="Gomel2021"></div>
+		<div class="bibtex_display" bibtexkey="Marconi2020a"></div>
 		<div class="bibtex_display" bibtexkey="Armaroli2020"></div>
 		<div class="bibtex_display" bibtexkey="Gomel2019"></div>
 
@@ -241,6 +257,7 @@
    
   </section>
    
+ 
    
    </body>
    
