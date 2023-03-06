@@ -11485,8 +11485,7 @@ pre {
 .header .bg-image {
   position: relative;
   z-index: -1; 
-  display: auto;
-  
+ 
   background-image: url(wavesss.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -11494,18 +11493,17 @@ pre {
 
 }
 
-
-.header .bg-image::before {
-  content: "";
-  display: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.header .bg-image-white {
+  position: relative;
+  z-index: 0; 
   background-color: rgba(255, 255, 255, 0.8); /* Set semi-transparent white color */
+  height: 100%;
 }
+
+
 .header .container .infos {
+  position: relative;
+  z-index: 2; 
   margin-top: 120px;
 }
 
