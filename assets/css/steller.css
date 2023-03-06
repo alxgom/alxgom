@@ -79,8 +79,12 @@ hr {
   height: 0;
   overflow: visible;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: American Typewriter;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -10980,7 +10984,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
   }
 }
-
+.tile-title {
+  font-size: calc(12px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+}
 .section-title {
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
 }
@@ -11459,10 +11465,13 @@ pre {
   border-bottom: 1px solid #dee2e6;
 }
 
+
+
 .header .container {
+  position: relative;
+  z-index: 1; 
   height: 100%;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
@@ -11471,6 +11480,31 @@ pre {
           align-items: center;
 }
 
+
+
+.header .bg-image {
+  position: relative;
+  z-index: -1; 
+  display: auto;
+  
+  background-image: url(wavesss.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+}
+
+
+.header .bg-image::before {
+  content: "";
+  display: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* Set semi-transparent white color */
+}
 .header .container .infos {
   margin-top: 120px;
 }
