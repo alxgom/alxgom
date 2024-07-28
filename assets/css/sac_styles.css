@@ -6,8 +6,9 @@ body {
 }
 
 .container {
-    width: 50%;
-    margin: 50px auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -26,6 +27,7 @@ form {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 label {
@@ -63,7 +65,8 @@ button:hover {
 
 input[type="range"] {
     -webkit-appearance: none;
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: 8px;
     background: #ddd;
     outline: none;
@@ -99,6 +102,7 @@ input[type="range"]::-moz-range-thumb {
 .room-dimensions {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 #result {
@@ -164,4 +168,16 @@ input[type="range"]::-moz-range-thumb {
 label:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .inline-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+    }
 }
