@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Rent Calculator</title>
+    <link rel="stylesheet" href="assets/css/sac_styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Room Rent Calculator</h1>
+        <form id="rent-form">
+            <div class="inline-inputs">
+                <div>
+                    <label for="rent">Rental price:</label>
+                    <input type="number" id="rent" name="rent" required>
+                </div>
+                <div>
+                    <label for="total_area">Total area of the apartment:</label>
+                    <input type="number" id="total_area" name="total_area" required>
+                </div>
+                <div id="price-per-unit-area"></div>
+            </div>
+            
+            <label for="num_rooms">Number of rooms:</label>
+            <input type="number" id="num_rooms" name="num_rooms" required>
+
+            <label for="alpha">Value of shared space (between 0 and 1):
+                <div class="tooltip">
+                    0 if the shared space is not taken into account of the calculation.<br>
+                    1 if the value per area of the shared space is considered the same as the value per area of the rooms.<br>
+                    Default: 0.75. The area of the shared space is considered to be worth 3/4 of the value of the private rooms.
+                </div>
+            </label>
+            <div class="inline-inputs">
+                <input type="range" id="alpha" name="alpha" min="0" max="1" step="0.01" value="0.75" style="width: 150px;">
+                <span id="alpha-value">0.75</span>
+            </div>
+
+            <div id="room-dimensions-container"></div>
+
+            <label for="bills">Bills per month (optional):</label>
+            <input type="number" id="bills" name="bills">
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="warning"></div>
+        <div id="result"></div>
+        <div class="room-visualization" id="room-visualization"></div>
+    </div>
+
+    <script src="assets/js/sac_script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
