@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Card</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .qr-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .qr-card {
+      width: 300px;
+      padding: 30px;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      transition: transform 0.2s;
+    }
+
+    .qr-card:hover {
+      transform: scale(1.05);
+    }
+
+    .qr-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #qrcode {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="assets/files/cv/cv_data_positions/CV_Alexis_Gomel.pdf" target="_blank" class="qr-link">
+    <div class="qr-card">
+      <div class="qr-title">CV Alexis Gomel </div>
+      <div id="qrcode"></div>
+    </div>
+  </a>
+
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://alxgom.github.io/alxgom/",
+      width: 150,
+      height: 150,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  </script>
+
+</body>
+</html>
